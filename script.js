@@ -33,7 +33,7 @@ function draw() {
         drops[i]++;
     }
 
-    // Draw user input drops
+
     userDrops.forEach(drop => {
         ctx.font = `${drop.size}px monospace`;
         ctx.fillStyle = `rgba(255, 0, 0, ${drop.alpha})`;
@@ -50,12 +50,12 @@ setInterval(draw, 33);
 
 document.addEventListener('keydown', function(event) {
     const text = event.key;
-    if (text.length === 1) { // Only process printable characters
-        const size = Math.random() * 50 + 20; // Random size between 20 and 70
+    if (text.length === 1) { 
+        const size = Math.random() * 50 + 20; 
         const x = Math.random() * canvas.width;
         const y = 0;
-        const speed = Math.random() * 3 + 1; // Random speed between 1 and 4
-        const alpha = 1; // Opacity for fade effect
+        const speed = Math.random() * 3 + 1; 
+        const alpha = 1; 
         userDrops.push({
             text: text,
             x: x,
